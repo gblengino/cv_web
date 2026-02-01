@@ -1,0 +1,20 @@
+---
+import NavBarItem from "./NavBarItem.astro";
+import { Icon } from "astro-icon/components";
+
+interface NavItem {
+    label:string,
+    href:string,
+    icon:string
+}
+
+const {navList} = Astro.props
+---
+
+<nav class="flex flex-col items-start py-4">
+    {
+        navList.map((navItem: NavItem) => (
+            <NavBarItem label={navItem.label} href={navItem.href} icon={navItem.icon}/>
+        ))
+    }
+</nav>

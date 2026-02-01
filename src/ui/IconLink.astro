@@ -1,0 +1,9 @@
+---
+import { Icon } from "astro-icon/components";
+
+const {href, icon} = Astro.props
+---
+
+<a href={href} class=`text-3xl hover:text-cyan-400 transition-colors duration-200`>
+    <Icon name={icon}/>
+</a>

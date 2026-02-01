@@ -1,0 +1,39 @@
+---
+import Photo from '../../assets/cv_photo.webp'
+import NavBar from "./NavBar.astro";
+import IconLink from '../../ui/IconLink.astro';
+
+import Image from 'astro/components/Image.astro';
+
+
+const navItems = [
+    { label:"Inicio", href:"/", icon:"mdi:home"},
+    { label:"Proyectos", href:"/projects", icon:"mdi:folder"},
+    { label:"Stack", href:"/stack", icon:"mdi:tools"},
+    { label:"Contacto", href:"/contact", icon:"mdi:contact"},
+]
+---
+
+<!-- MOBILE HEADER -->
+<header>
+    
+</header>
+
+
+<!-- DESKTOP HEADER (sidebar) -->
+<aside class="hidden md:block md:w-[25%] h-full shadow-[inset_-1px_0_0_0_rgb(63,63,70)] bg-zinc-800">
+    <header class="flex w-full p-6">
+        <picture class="w-18">
+            <Image src={Photo} alt="photo" class:list={'rounded-full'}/>
+        </picture>
+        <div class="flex flex-col pl-4">
+            <h1 class="text-zinc-100 text-md">Giuliano Blengino</h1>
+            <h2 class="text-zinc-400 text-sm">Software Developer Student / Web Developer</h2>
+        </div>
+    </header>
+    <NavBar navList={navItems}/>
+    <section class="w-full flex justify-center gap-4 text-zinc-100 text-3xl">
+        <IconLink icon="mdi:linkedin" href="https://www.linkedin.com/in/giuliano-blengino/"/>
+        <IconLink icon="mdi:github" href="https://github.com/gblengino"
+    </section>
+</aside>
